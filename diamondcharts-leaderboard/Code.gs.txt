@@ -1,0 +1,108 @@
+function generateDiamondTop20HTML() {
+  const sheet = SpreadsheetApp.openById('1xaL4nqkAmNzSbCmr4qjKhal188E83lOHdKAueaH8l28').getSheetByName('Gradebook');
+  const data = sheet.getDataRange().getValues();
+
+  const headers = data[0];
+  const albumCol = headers.indexOf('Album');
+  const artistCol = headers.indexOf('Artist');
+  const genreCol = headers.indexOf('Genre');
+  const gradeCol = headers.indexOf('Grade');
+
+  const entries = data.slice(1).filter(row => row[gradeCol] !== '');
+
+  // Sort by grade DESC, then album ASC
+  entries.sort((a, b) => {
+    const gradeA = parseFloat(a[gradeCol]);
+    const gradeB = parseFloat(b[gradeCol]);
+    if (gradeB !== gradeA) return gradeB - gradeA;
+    return a[albumCol].localeCompare(b[albumCol]);
+  });
+
+  const top20 = entries.slice(0, 20);
+
+  const html = `
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0b0c10;
+      color: #ffffff;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      overflow-y: auto;
+      max-height: 100vh;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+      font-size: 16px;
+      background: linear-gradient(135deg, #111 0%, #1f1f1f 100%);
+      border: 1px solid #ffffff33;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #ffffff22;
+      vertical-align: top;
+      white-space: normal;
+      word-wrap: break-word;
+    }
+    th {
+      color: #e0e0e0;
+      font-size: 18px;
+      border-bottom: 2px solid #ffffff88;
+    }
+    .rank {
+      font-weight: bold;
+      font-size: 20px;
+      color: #b9f2ff;
+      text-shadow: 1px 1px 2px #00f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-wrapper">
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Album</th>
+        <th>Artist</th>
+        <th>Genre</th>
+        <th>Grade</th>
+      </tr>
+      ${top20.map((row, i) => {
+        const album = row[albumCol] && row[albumCol].length > 20 ? row[albumCol].match(/.{1,20}/g).join('<br>') : row[albumCol];
+        const artist = row[artistCol] && row[artistCol].length > 20 ? row[artistCol].match(/.{1,20}/g).join('<br>') : row[artistCol];
+        const genre = row[genreCol] || '';
+        const grade = row[gradeCol] || '';
+        return `
+          <tr>
+            <td class="rank">#${i + 1}</td>
+            <td>${album}</td>
+            <td>${artist}</td>
+            <td>${genre}</td>
+            <td>${grade}</td>
+          </tr>`;
+      }).join('')}
+    </table>
+  </div>
+</body>
+</html>`;
+
+  const files = DriveApp.getFilesByName('Diamond_Top20.html');
+  if (files.hasNext()) {
+    const file = files.next();
+    file.setContent(html);
+    Logger.log('✅ Updated HTML: ' + file.getUrl());
+  } else {
+    const file = DriveApp.createFile('Diamond_Top20.html', html, MimeType.HTML);
+    Logger.log('✅ Created HTML: ' + file.getUrl());
+  }
+} 
