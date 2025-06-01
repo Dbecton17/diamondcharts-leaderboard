@@ -1,59 +1,29 @@
 
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
-      background-color: transparent;
+      background-color: #0b0c10;
       color: #ffffff;
     }
- 
- @keyframes shutter {
-  0% { opacity: 1; transform: scale(1); }
-  10% { opacity: 0.6; transform: scale(1.02); }
-  20% { opacity: 1; transform: scale(0.98); }
-  30% { opacity: 0.8; transform: scale(1.01); }
-  40% { opacity: 1; transform: scale(1); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-.gradebook-title {
-  text-align: center;
-  font-family: 'Anton', sans-serif;
-  font-size: 42px;
-  font-weight: bold;
-  color: #87cefa; /* Light blue */
-  text-shadow: 0 0 6px white, 0 0 12px white;
-  margin: 20px 0 10px 0;
-  animation: shutter 12s infinite;
-}
-
     .table-wrapper {
       overflow-x: auto;
       overflow-y: visible;
-      padding: 0px;
-      margin: 0;
+      max-height: none;
+      padding: 20px;
     }
-
     table {
-      border-collapse: collapse;
       width: 100%;
+      border-collapse: collapse;
       min-width: 600px;
-      table-layout: fixed;
-      background-color: transparent;
+      font-size: 16px;
+      background: linear-gradient(135deg, #111 0%, #1f1f1f 100%);
+      border: 1px solid #ffffff33;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
     }
-
-    thead {
-      position: sticky;
-      top: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px);
-      z-index: 2;
-    }
-
     th, td {
       padding: 12px 16px;
       text-align: left;
@@ -62,13 +32,11 @@
       white-space: normal;
       word-wrap: break-word;
     }
-
     th {
       color: #e0e0e0;
       font-size: 18px;
       border-bottom: 2px solid #ffffff88;
     }
-
     .rank {
       font-weight: bold;
       font-size: 20px;
@@ -78,149 +46,153 @@
   </style>
 </head>
 <body>
-  <h1 class="gradebook-title">RAPATOIS GRADEBOOK TOP 20</h1>
-  <img src="https://raw.githubusercontent.com/Dbecton17/diamondcharts-leaderboard/main/diamond_banner.png" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 20px;" />
   <div class="table-wrapper">
     <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Album</th>
-          <th>Artist</th>
-          <th>Genre</th>
-          <th>Grade</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-            <tr>
-              <td class="rank">#1</td>
-              <td>The Good The Bad The<br>Dollar Menu</td>
-              <td>Ray Vaughn</td>
-              <td>Hiphop/Rap</td>
-              <td>94</td>
-            </tr>
-            <tr>
-              <td class="rank">#2</td>
-              <td>Good Things Take<br>Time</td>
-              <td>DeAnte Hitchcock</td>
-              <td>Hiphop/Rap</td>
-              <td>94</td>
-            </tr>
-            <tr>
-              <td class="rank">#3</td>
-              <td>Greatest Rapper<br>Alive</td>
-              <td>G Herbo</td>
-              <td>Hiphop/Rap</td>
-              <td>91</td>
-            </tr>
-            <tr>
-              <td class="rank">#4</td>
-              <td>Kush + Orange Juice<br>2</td>
-              <td>Wiz Khalifa</td>
-              <td>Hiphop/Rap</td>
-              <td>91</td>
-            </tr>
-            <tr>
-              <td class="rank">#5</td>
-              <td>Make Hiphop Fun<br>Again</td>
-              <td>LaRussell, Mike G<br>Beatz</td>
-              <td>Hiphop/Rap</td>
-              <td>90</td>
-            </tr>
-            <tr>
-              <td class="rank">#6</td>
-              <td>The Hope</td>
-              <td>51 June</td>
-              <td>Hiphop/Rap</td>
-              <td>89</td>
-            </tr>
-            <tr>
-              <td class="rank">#7</td>
-              <td>Forever My Moment</td>
-              <td>Tee Grizzley</td>
-              <td>Hiphop/Rap</td>
-              <td>89</td>
-            </tr>
-            <tr>
-              <td class="rank">#8</td>
-              <td>Where Ya Been?</td>
-              <td>K4M</td>
-              <td>Hiphop/Rap</td>
-              <td>88</td>
-            </tr>
-            <tr>
-              <td class="rank">#9</td>
-              <td>Orange Tape</td>
-              <td>Ro$ama</td>
-              <td>Hiphop/Rap</td>
-              <td>88</td>
-            </tr>
-            <tr>
-              <td class="rank">#10</td>
-              <td>Soul Ain't Dead</td>
-              <td>W3sst</td>
-              <td>R&B/Soul</td>
-              <td>88</td>
-            </tr>
-            <tr>
-              <td class="rank">#11</td>
-              <td>The Final Call</td>
-              <td>Dave East, Ransom</td>
-              <td>Hiphop/Rap</td>
-              <td>86</td>
-            </tr>
-            <tr>
-              <td class="rank">#12</td>
-              <td>Carved In Gold</td>
-              <td>LG Malique</td>
-              <td>Hiphop/Rap</td>
-              <td>86</td>
-            </tr>
-            <tr>
-              <td class="rank">#13</td>
-              <td>Built Different</td>
-              <td>K Camp</td>
-              <td>R&B/Soul</td>
-              <td>86</td>
-            </tr>
-            <tr>
-              <td class="rank">#14</td>
-              <td>Glockaveli</td>
-              <td>Key Glock</td>
-              <td>Hiphop/Rap</td>
-              <td>85</td>
-            </tr>
-            <tr>
-              <td class="rank">#15</td>
-              <td>Heart of the Jungle<br>2</td>
-              <td>Ots J Huncho</td>
-              <td>Hiphop/Rap</td>
-              <td>85</td>
-            </tr>
-            <tr>
-              <td class="rank">#16</td>
-              <td>Blame The Chat</td>
-              <td>DDG</td>
-              <td>Hiphop/Rap</td>
-              <td>83</td>
-            </tr>
-            <tr>
-              <td class="rank">#17</td>
-              <td>Money > Emotions</td>
-              <td>SAUCEMEUPGQ</td>
-              <td>Hiphop/Rap</td>
-              <td>83</td>
-            </tr>
-            <tr>
-              <td class="rank">#18</td>
-              <td>Sincerely J.</td>
-              <td>Nevan J.</td>
-              <td>R&B/Soul</td>
-              <td>75</td>
-            </tr>
-      </tbody>
+      <tr>
+        <th>#</th>
+        <th>Album</th>
+        <th>Artist</th>
+        <th>Genre</th>
+        <th>Grade</th>
+      </tr>
+      
+          <tr>
+            <td class="rank">#1</td>
+            <td>Good Things Take Tim<br>e</td>
+            <td>DeAnte Hitchcock</td>
+            <td>Hiphop/Rap</td>
+            <td>94</td>
+          </tr>
+          <tr>
+            <td class="rank">#2</td>
+            <td>The Good The Bad The<br> Dollar Menu </td>
+            <td>Ray Vaughn</td>
+            <td>Hiphop/Rap</td>
+            <td>94</td>
+          </tr>
+          <tr>
+            <td class="rank">#3</td>
+            <td>Greatest Rapper Aliv<br>e</td>
+            <td>G Herbo</td>
+            <td>Hiphop/Rap</td>
+            <td>91</td>
+          </tr>
+          <tr>
+            <td class="rank">#4</td>
+            <td>Kush + Orange Juice <br>2</td>
+            <td>Wiz Khalifa</td>
+            <td>Hiphop/Rap</td>
+            <td>91</td>
+          </tr>
+          <tr>
+            <td class="rank">#5</td>
+            <td>Make Hiphop Fun Agai<br>n</td>
+            <td>LaRussell, Mike G Be<br>atz</td>
+            <td>Hiphop/Rap</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td class="rank">#6</td>
+            <td>Forever My Moment</td>
+            <td>Tee Grizzley</td>
+            <td>Hiphop/Rap</td>
+            <td>89</td>
+          </tr>
+          <tr>
+            <td class="rank">#7</td>
+            <td>The Hope</td>
+            <td>51 June</td>
+            <td>Hiphop/Rap</td>
+            <td>89</td>
+          </tr>
+          <tr>
+            <td class="rank">#8</td>
+            <td>Orange Tape</td>
+            <td>Ro$ama</td>
+            <td>Hiphop/Rap</td>
+            <td>88</td>
+          </tr>
+          <tr>
+            <td class="rank">#9</td>
+            <td>Soul Ain't Dead </td>
+            <td>W3sst</td>
+            <td>R&B/Soul</td>
+            <td>88</td>
+          </tr>
+          <tr>
+            <td class="rank">#10</td>
+            <td>Where Ya Been?</td>
+            <td>K4M</td>
+            <td>Hiphop/Rap</td>
+            <td>88</td>
+          </tr>
+          <tr>
+            <td class="rank">#11</td>
+            <td>Built Different </td>
+            <td>K Camp</td>
+            <td>R&B/Soul</td>
+            <td>86</td>
+          </tr>
+          <tr>
+            <td class="rank">#12</td>
+            <td>Carved In Gold</td>
+            <td>LG Malique</td>
+            <td>Hiphop/Rap</td>
+            <td>86</td>
+          </tr>
+          <tr>
+            <td class="rank">#13</td>
+            <td>The Final Call</td>
+            <td>Dave East, Ransom</td>
+            <td>Hiphop/Rap</td>
+            <td>86</td>
+          </tr>
+          <tr>
+            <td class="rank">#14</td>
+            <td>Glockaveli</td>
+            <td>Key Glock</td>
+            <td>Hiphop/Rap</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td class="rank">#15</td>
+            <td>Heart of the Jungle <br>2</td>
+            <td>Ots J Huncho</td>
+            <td>Hiphop/Rap</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td class="rank">#16</td>
+            <td>Blame The Chat</td>
+            <td>DDG</td>
+            <td>Hiphop/Rap</td>
+            <td>83</td>
+          </tr>
+          <tr>
+            <td class="rank">#17</td>
+            <td>Money > Emotions</td>
+            <td>SAUCEMEUPGQ</td>
+            <td>Hiphop/Rap</td>
+            <td>83</td>
+          </tr>
+          <tr>
+            <td class="rank">#18</td>
+            <td>Sincerely J.</td>
+            <td>Nevan J.</td>
+            <td>R&B/Soul</td>
+            <td>75</td>
+          </tr>
+          </tbody>
     </table>
+  </div>
+
+  <div style="text-align: center; font-size: 16px; margin: 40px 20px 20px 20px; color: #000000;">
+    For a chance to see your project make the list, 
+    <a href="https://buy.stripe.com/28o6rX9CgejF9he8ww" 
+       target="_blank" 
+       style="color: #87cefa; font-weight: bold; text-decoration: underline;">
+       get your album graded.
+    </a>
   </div>
 </body>
 </html>
