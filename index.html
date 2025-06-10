@@ -108,7 +108,9 @@
   <body>
     <h1 class="title-animate">Diamond Gradebook Top 20</h1>
     <div style="text-align: center; margin-top: 20px;">
-  <img src="<img src="https://github.com/Dbecton17/diamondcharts-leaderboard/blob/main/diamond_banner.png" alt="Banner" style="max-width: 100%; height: auto; border-radius: 12px;" />
+  <img src="https://raw.githubusercontent.com/Dbecton17/diamondcharts-leaderboard/main/diamond_banner.png" 
+     alt="Banner" 
+     style="max-width: 100%; height: auto; border-radius: 12px;" />
 </div>
     <div class="table-wrapper">
       <table>
@@ -283,8 +285,8 @@
       let flipped = false;
 
       function showCard(front, back) {
-        document.getElementById('frontImg').src = front;
-        document.getElementById('backImg').src = back;
+        document.getElementById('frontImg').src = encodeURI(front);
+        document.getElementById('backImg').src = encodeURI(back);
         document.getElementById('popup').style.display = 'block';
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('card').classList.remove('flipped');
