@@ -3,9 +3,9 @@
   <head>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background-color: #000;
-        color: white;
+        font-family: 'Arial', sans-serif;
+        background-color: transparent;
+        color: #00FFFF;
         margin: 0;
         padding: 0;
       }
@@ -20,7 +20,7 @@
       }
       .rank {
         font-weight: bold;
-        color: gold;
+        color: #00FFFF;
       }
       .card-popup {
         position: fixed;
@@ -48,9 +48,9 @@
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
-        border: 2px solid gold;
+        border: 2px solid #00FFFF;
         border-radius: 12px;
-        box-shadow: 0 0 20px gold;
+        box-shadow: 0 0 20px #00FFFF;
       }
       .card-back {
         transform: rotateY(180deg);
@@ -71,10 +71,34 @@
         z-index: 9998;
         display: none;
       }
+      .glow-link {
+        color: #00FFFF;
+        cursor: pointer;
+        text-decoration: underline;
+        transition: text-shadow 0.3s;
+      }
+      .glow-link:hover {
+        text-shadow: 0 0 8px #00FFFF;
+      }
+      .title-animate {
+        text-align: center;
+        font-size: 36px;
+        color: #00FFFF;
+        font-family: 'Rubik Mono One', sans-serif;
+        animation: glow 1.5s ease-in-out infinite alternate;
+      }
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #00FFFF;
+        }
+        to {
+          text-shadow: 0 0 20px #00FFFF;
+        }
+      }
     </style>
   </head>
   <body>
-    <h1 style="text-align:center;color:#FFD700;font-size:36px;">Diamond Gradebook Top 20</h1>
+    <h1 class="title-animate">Diamond Gradebook Top 20</h1>
     <div class="table-wrapper">
       <table>
         <thead>
@@ -88,142 +112,142 @@
         </thead>
         <tbody>
           
-              <tr onclick="showCard('https://drive.google.com/file/d/1xzT67t_nTKWVvuRMS6p186AdUAeoTdic/view?usp=drive_link', 'https://drive.google.com/file/d/1UoW7OWsUJtXV2Ndv5EeIU1M7jGm-gCB_/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>1</td>
-                <td>The Good The Bad The Dollar Menu </td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1xzT67t_nTKWVvuRMS6p186AdUAeoTdic/view?usp=drive_link', 'https://drive.google.com/file/d/1UoW7OWsUJtXV2Ndv5EeIU1M7jGm-gCB_/view?usp=drive_link')">The Good The Bad The Dollar Menu </span></td>
                 <td>Ray Vaughn</td>
                 <td>Hiphop/Rap</td>
                 <td>94</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1F1qiF-zd_8n-dEdqry6EYCVPGo0VB0vv/view?usp=drive_link', 'https://drive.google.com/file/d/1XlEfy6Vf21gfVfnIQODXJTeroHxPzDJG/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>2</td>
-                <td>Good Things Take Time</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1F1qiF-zd_8n-dEdqry6EYCVPGo0VB0vv/view?usp=drive_link', 'https://drive.google.com/file/d/1XlEfy6Vf21gfVfnIQODXJTeroHxPzDJG/view?usp=drive_link')">Good Things Take Time</span></td>
                 <td>DeAnte Hitchcock</td>
                 <td>Hiphop/Rap</td>
                 <td>94</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1MP48qkq0F1-z6b8l70_SMkqiZkkP5h3A/view?usp=drive_link', 'https://drive.google.com/file/d/1_rjWM18AecoIRQWr0cpHCwjnlQ7-UDmp/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>3</td>
-                <td>Greatest Rapper Alive</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1MP48qkq0F1-z6b8l70_SMkqiZkkP5h3A/view?usp=drive_link', 'https://drive.google.com/file/d/1_rjWM18AecoIRQWr0cpHCwjnlQ7-UDmp/view?usp=drive_link')">Greatest Rapper Alive</span></td>
                 <td>G Herbo</td>
                 <td>Hiphop/Rap</td>
                 <td>91</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1OAadrRdAnwx77TtLXStNNgGgQ4m6a_V1/view?usp=drive_link', 'https://drive.google.com/file/d/142HNJJkvIkKFPaaj5GfgX-POj0DbW8uQ/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>4</td>
-                <td>Kush + Orange Juice 2</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1OAadrRdAnwx77TtLXStNNgGgQ4m6a_V1/view?usp=drive_link', 'https://drive.google.com/file/d/142HNJJkvIkKFPaaj5GfgX-POj0DbW8uQ/view?usp=drive_link')">Kush + Orange Juice 2</span></td>
                 <td>Wiz Khalifa</td>
                 <td>Hiphop/Rap</td>
                 <td>91</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/10SfTc4DPHJsG0Wd_47BX0bR-cOrSQzQ-/view?usp=drive_link', 'https://drive.google.com/file/d/1X69zE0W16aUs8sVOLQ0XC1_bkZ7TmTcZ/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>5</td>
-                <td>Make Hiphop Fun Again</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/10SfTc4DPHJsG0Wd_47BX0bR-cOrSQzQ-/view?usp=drive_link', 'https://drive.google.com/file/d/1X69zE0W16aUs8sVOLQ0XC1_bkZ7TmTcZ/view?usp=drive_link')">Make Hiphop Fun Again</span></td>
                 <td>LaRussell, Mike G Beatz</td>
                 <td>Hiphop/Rap</td>
                 <td>90</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1DQdnphheFWnw-iLySAN7fmxobqlARbmt/view?usp=drive_link', 'https://drive.google.com/file/d/12LBSaUuVr73mX7pJAcqx2I8fUNDAzWwe/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>6</td>
-                <td>A Eastside Story</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1DQdnphheFWnw-iLySAN7fmxobqlARbmt/view?usp=drive_link', 'https://drive.google.com/file/d/12LBSaUuVr73mX7pJAcqx2I8fUNDAzWwe/view?usp=drive_link')">A Eastside Story</span></td>
                 <td>Chris "The God MC" Cain</td>
                 <td>Hiphop/Rap</td>
                 <td>90</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1dB2WVBzEIHHO02am39u7Lpv_IdVZbk4b/view?usp=drive_link', 'https://drive.google.com/file/d/1E_Rk8RaInlijOfrouK0WLdj1zyZ5VeF9/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>7</td>
-                <td>The Hope</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1dB2WVBzEIHHO02am39u7Lpv_IdVZbk4b/view?usp=drive_link', 'https://drive.google.com/file/d/1E_Rk8RaInlijOfrouK0WLdj1zyZ5VeF9/view?usp=drive_link')">The Hope</span></td>
                 <td>51 June</td>
                 <td>Hiphop/Rap</td>
                 <td>89</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1SANlPgVSFtYs_WiI3DsnJzwEBPTSNb-G/view?usp=drive_link', 'https://drive.google.com/file/d/1yC05sJSMfGeU7rHeg5-vz-aVuXHah4HJ/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>8</td>
-                <td>Forever My Moment</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1SANlPgVSFtYs_WiI3DsnJzwEBPTSNb-G/view?usp=drive_link', 'https://drive.google.com/file/d/1yC05sJSMfGeU7rHeg5-vz-aVuXHah4HJ/view?usp=drive_link')">Forever My Moment</span></td>
                 <td>Tee Grizzley</td>
                 <td>Hiphop/Rap</td>
                 <td>89</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1upcZQHIaC-8GTeQbstGKl_TlDM9jpX6K/view?usp=drive_link', 'https://drive.google.com/file/d/1XEdZso0em12CdCdHj4mbC7_F7CWwATH9/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>9</td>
-                <td>Where Ya Been?</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1upcZQHIaC-8GTeQbstGKl_TlDM9jpX6K/view?usp=drive_link', 'https://drive.google.com/file/d/1XEdZso0em12CdCdHj4mbC7_F7CWwATH9/view?usp=drive_link')">Where Ya Been?</span></td>
                 <td>K4M</td>
                 <td>Hiphop/Rap</td>
                 <td>88</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1XahUSjbN0ijETjEldNncc0TpKuTwYP9n/view?usp=drive_link', 'https://drive.google.com/file/d/1letfaJN4ZDRfHvLX13Vs9pEeXrQMXYjT/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>10</td>
-                <td>Orange Tape</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1XahUSjbN0ijETjEldNncc0TpKuTwYP9n/view?usp=drive_link', 'https://drive.google.com/file/d/1letfaJN4ZDRfHvLX13Vs9pEeXrQMXYjT/view?usp=drive_link')">Orange Tape</span></td>
                 <td>Ro$ama</td>
                 <td>Hiphop/Rap</td>
                 <td>88</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1Ch-hDrpsMQaRKeGZoA-iATOEBkUO573g/view?usp=drive_link', 'https://drive.google.com/file/d/1Ro-rnjcTGjYemaoe-tNQjV2ZrhzuQrGk/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>11</td>
-                <td>Soul Ain't Dead 2.0</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1Ch-hDrpsMQaRKeGZoA-iATOEBkUO573g/view?usp=drive_link', 'https://drive.google.com/file/d/1Ro-rnjcTGjYemaoe-tNQjV2ZrhzuQrGk/view?usp=drive_link')">Soul Ain't Dead 2.0</span></td>
                 <td>W3sst</td>
                 <td>R&B/Soul</td>
                 <td>88</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1nl6P9htxIIw33U4_W4yqT0mJFAencKBZ/view?usp=drive_link', 'https://drive.google.com/file/d/1kp6Zvv3LKHtEoOfaUgHKHJJe6PJcZY2Q/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>12</td>
-                <td>The Final Call</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1nl6P9htxIIw33U4_W4yqT0mJFAencKBZ/view?usp=drive_link', 'https://drive.google.com/file/d/1kp6Zvv3LKHtEoOfaUgHKHJJe6PJcZY2Q/view?usp=drive_link')">The Final Call</span></td>
                 <td>Dave East, Ransom</td>
                 <td>Hiphop/Rap</td>
                 <td>86</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1bVdcnpDOGkBG7q3YlgkL0_AQcAIEV7xI/view?usp=drive_link', 'https://drive.google.com/file/d/14y6VBk7deP1damkQ9SxocYodFay0GnPp/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>13</td>
-                <td>Carved In Gold</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1bVdcnpDOGkBG7q3YlgkL0_AQcAIEV7xI/view?usp=drive_link', 'https://drive.google.com/file/d/14y6VBk7deP1damkQ9SxocYodFay0GnPp/view?usp=drive_link')">Carved In Gold</span></td>
                 <td>LG Malique</td>
                 <td>Hiphop/Rap</td>
                 <td>86</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1msZdPg_VsEzeuE9IJ1Nnr869uIrhovk3/view?usp=drive_link', 'https://drive.google.com/file/d/1cRgHXDoowpjdIwG-RAYMv4aSUaaS3fHL/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>14</td>
-                <td>Built Different </td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1msZdPg_VsEzeuE9IJ1Nnr869uIrhovk3/view?usp=drive_link', 'https://drive.google.com/file/d/1cRgHXDoowpjdIwG-RAYMv4aSUaaS3fHL/view?usp=drive_link')">Built Different </span></td>
                 <td>K Camp</td>
                 <td>R&B/Soul</td>
                 <td>86</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1ddiLPkaMF9vzWYaJ6K20cr2ZlLVgLP6j/view?usp=drive_link', 'https://drive.google.com/file/d/1Acl_nL33Q_1cljr6jcuCCM19eQ2NmDSU/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>15</td>
-                <td>Glockaveli</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1ddiLPkaMF9vzWYaJ6K20cr2ZlLVgLP6j/view?usp=drive_link', 'https://drive.google.com/file/d/1Acl_nL33Q_1cljr6jcuCCM19eQ2NmDSU/view?usp=drive_link')">Glockaveli</span></td>
                 <td>Key Glock</td>
                 <td>Hiphop/Rap</td>
                 <td>85</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1UkFque1aR0J1pQzBp_6hF6iA-tVojk65/view?usp=drive_link', 'https://drive.google.com/file/d/1nNgZvglWyZXWAqdQ0opFzGJmpw7gIops/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>16</td>
-                <td>Heart of the Jungle 2</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1UkFque1aR0J1pQzBp_6hF6iA-tVojk65/view?usp=drive_link', 'https://drive.google.com/file/d/1nNgZvglWyZXWAqdQ0opFzGJmpw7gIops/view?usp=drive_link')">Heart of the Jungle 2</span></td>
                 <td>Ots J Huncho</td>
                 <td>Hiphop/Rap</td>
                 <td>85</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/17KRcm4sYEbAV8hEdQc3CxcXqgb70KiR5/view?usp=drive_link', 'https://drive.google.com/file/d/19wSOHqiNaYxqTxqV7D129HEgjzZub_bV/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>17</td>
-                <td>Tha Carter VI</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/17KRcm4sYEbAV8hEdQc3CxcXqgb70KiR5/view?usp=drive_link', 'https://drive.google.com/file/d/19wSOHqiNaYxqTxqV7D129HEgjzZub_bV/view?usp=drive_link')">Tha Carter VI</span></td>
                 <td>Lil Wayne</td>
                 <td>Hiphop/Rap</td>
                 <td>84</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1P5m3mGWykTFizOibNM-jFldVJ3iHgApb/view?usp=drive_link', 'https://drive.google.com/file/d/1shqTXgc60mcOJpZKJ5gmtnW7CotoOi20/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>18</td>
-                <td>Florida Boy</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1P5m3mGWykTFizOibNM-jFldVJ3iHgApb/view?usp=drive_link', 'https://drive.google.com/file/d/1shqTXgc60mcOJpZKJ5gmtnW7CotoOi20/view?usp=drive_link')">Florida Boy</span></td>
                 <td>Luh Tyler</td>
                 <td>Hiphop/Rap</td>
                 <td>84</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1p8IgS4dgYZImvrSyQxdAPK5Cw4-XeOBe/view?usp=drive_link', 'https://drive.google.com/file/d/1A1Jo6Jhe3MOoIOv_onMhAw6_HIP1Zpwz/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>19</td>
-                <td>Blame The Chat</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1p8IgS4dgYZImvrSyQxdAPK5Cw4-XeOBe/view?usp=drive_link', 'https://drive.google.com/file/d/1A1Jo6Jhe3MOoIOv_onMhAw6_HIP1Zpwz/view?usp=drive_link')">Blame The Chat</span></td>
                 <td>DDG</td>
                 <td>Hiphop/Rap</td>
                 <td>83</td>
               </tr>
-              <tr onclick="showCard('https://drive.google.com/file/d/1zlyGACGgwUl5lgZ3iJlMW5UkP8nNmACK/view?usp=drive_link', 'https://drive.google.com/file/d/1vBXRBqSj0U1B9KPLm_0NrmDDJ2-1BqJr/view?usp=drive_link')">
+              <tr>
                 <td class="rank"><span class="hash">#</span>20</td>
-                <td>Money > Emotions</td>
+                <td><span class="glow-link" onclick="showCard('https://drive.google.com/file/d/1zlyGACGgwUl5lgZ3iJlMW5UkP8nNmACK/view?usp=drive_link', 'https://drive.google.com/file/d/1vBXRBqSj0U1B9KPLm_0NrmDDJ2-1BqJr/view?usp=drive_link')">Money > Emotions</span></td>
                 <td>SAUCEMEUPGQ</td>
                 <td>Hiphop/Rap</td>
                 <td>83</td>
